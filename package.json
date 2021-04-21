@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "curso natours jonas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ellecce/natours.git"
+  },
+  "author": "lisandro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ellecce/natours/issues"
+  },
+  "homepage": "https://github.com/ellecce/natours#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
