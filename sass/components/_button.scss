@@ -49,6 +49,31 @@
 
   &--animated {
     animation: moveInBottom 0.5s ease-out 0.75s;
-    animation-fill-mode: backwards; /* lo que hace es implementar los estados del animation 0% al inicio, inclusive si todavia no se empezo a ejecutar*/
+    animation-fill-mode: backwards; /* lo que hace es implementar los estados del animation 0% al inicio, inclusive si todavia no se empezo a ejecutar (es decir, antes del 0%), cuando este tiene seteado algun delay en su ejecucion*/
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    color: $color-primary;
+    font-size: $default-font-size;
+    transition: all 0.3s;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    display: inline-block;
+  }
+
+  &:hover {
+    background-color: $color-primary-dark;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(0);
   }
 }
