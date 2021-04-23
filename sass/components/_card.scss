@@ -1,18 +1,18 @@
 .card {
   // FUNCTIONALITY
-  perspective: 150rem; // -> esto le da una perspectiva cuando giran las card-sides, como si saliese de la ventana. Tipo efecto 3D.
+  perspective: 150rem;
   -moz-perspective: 150rem;
-  position: relative; // -> para poder poner en absolut el front y back de las 2 cartas
+  position: relative;
   height: 52rem;
 
   &__side {
-    height: 52rem; // -> lo repito porque la card colapsa cuando lo transformo en absolute
+    height: 52rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; // -> como ahora es position absolute, pierde el normal flow (pasa lo mismo que con float), entonces colapsa. Por eso hay que agregarle el width 100%.
-    backface-visibility: hidden; // -> esto es para que no se vea la parte de atras de la tarjeta
+    width: 100%;
+    backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
@@ -22,9 +22,8 @@
     }
 
     &--back {
-      transform: rotateY(180deg); // -> defino el back como rotado inicialmente. Cuando le hago hover, va a rotar a 0 grados, de modo que se va a ver derecho (estando hovered)
+      transform: rotateY(180deg);
 
-      // a continuacion defino los 3 colores distintos de los 3 backs
       &-1 {
         background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
       }
@@ -40,20 +39,20 @@
   }
 
   &:hover &__side--front {
-    transform: rotateY(-180deg); // -> llevo a atras la parte delantera
+    transform: rotateY(-180deg);
   }
 
   &:hover &__side--back {
-    transform: rotateY(0); // -> traigo adelante la parte trasera
+    transform: rotateY(0);
   }
 
   // FRONT SIDE STYLING
   &__picture {
     background-size: cover;
-    height: 23rem; // para darle altura a la imagen
-    background-blend-mode: screen; // Esto sirve para hacer un blend de distintas imagenes. En este caso, una imagen y un gradiente de color. Se puede hacer en photoshop tmb
+    height: 23rem;
+    background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); // para cortar la imagen con forma polig
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
@@ -84,7 +83,7 @@
 
   &__heading-span {
     padding: 1rem 1.5rem;
-    -webkit-box-decoration-break: clone; // como el texto tiene un break, esto hace que ambas lineas sean tratadas de forma independiente, y asi aplicarseles el padding a ambas
+    -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
     &--1 {
