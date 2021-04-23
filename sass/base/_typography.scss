@@ -41,7 +41,7 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  display: inline-block;
+  display: inline-block; // originalmente era un h2, es decir un block. Lo tomo como inline-block para poder centrarlo con aling-text: center.
   background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
   -webkit-background-clip: text;
   color: transparent;
